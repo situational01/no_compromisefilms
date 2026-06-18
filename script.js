@@ -44,11 +44,11 @@
     // ──────────────────────────────────────
     const portfolioData = [
         {
-            src: 'https://picsum.photos/seed/sports-action/1200/1500',
+            src: 'img/20260425161251_IMG_4413.jpg',
             category: 'Sports',
-            title: 'The Final Round',
-            caption: 'Championship boxing, Lagos — 2024',
-            alt: 'Intense moment during a championship boxing match',
+            title: 'Kenya Cup Semis',
+            caption: 'KCB RFC vs Nondies RFC — 2026',
+            alt: 'Intense action from the Kenya Cup semifinals, with players battling for possession in a muddy scrum',
         },
         {
             src: 'https://picsum.photos/seed/wildlife-elephants/1500/1000',
