@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="No Compromise Films — Documentary photography, cinematography, and creative direction. Sports, Wildlife & Lifestyle storytelling.">
+    <title>No Compromise Films | Documentary Photography & Film</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Grain Overlay -->
+    <div class="grain-overlay" aria-hidden="true"></div>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader__inner">
+            <span class="preloader__text">NO COMPROMISE</span>
+            <div class="preloader__line">
+                <div class="preloader__line-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor" aria-hidden="true"></div>
+    <div class="cursor-follower" id="cursorFollower" aria-hidden="true"></div>
+
+    <!-- Navigation -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#home" class="nav__logo">
+                <span class="nav__logo-text">NCF</span>
+                <span class="nav__logo-divider">|</span>
+                <span class="nav__logo-tagline">No Compromise Films</span>
+            </a>
+            <ul class="nav__list" id="navList">
+                <li class="nav__item"><a href="#home" class="nav__link nav__link--active">Home</a></li>
+                <li class="nav__item"><a href="#portfolio" class="nav__link">Portfolio</a></li>
+                <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                <li class="nav__item"><a href="#showreel" class="nav__link">Showreel</a></li>
+                <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+            </ul>
+            <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">
+                <span class="nav__toggle-bar"></span>
+                <span class="nav__toggle-bar"></span>
+                <span class="nav__toggle-bar"></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero__bg">
+                <div class="hero__bg-image" style="background-image: url('img/IMG_4887.jpg');"></div>
+                <div class="hero__bg-overlay"></div>
+            </div>
+            <div class="hero__content container">
+                <p class="hero__pretitle reveal-text">Documentary Storyteller</p>
+                <h1 class="hero__title reveal-text">No Compromise<br>Films</h1>
+                <p class="hero__subtitle reveal-text">
+                    Capturing raw truth through the lens. Sports, wildlife, and lifestyle
+                    documentary photography &amp; cinematography with an uncompromising eye.
+                </p>
+                <div class="hero__cta reveal-text">
+                    <a href="#portfolio" class="btn btn--primary">
+                        <span>View Portfolio</span>
+                        <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17l9-9M7 7h9v9"/>
+                        </svg>
+                    </a>
+                    <a href="#showreel" class="btn btn--ghost">
+                        <span>Watch Showreel</span>
+                        <svg class="btn__play" viewBox="0 0 24 24" fill="currentColor">
+                            <polygon points="5,3 19,12 5,21"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="hero__scroll-indicator reveal-text">
+                    <span>Scroll</span>
+                    <div class="hero__scroll-line"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section class="portfolio" id="portfolio">
+            <div class="container">
+                <div class="section-header reveal">
+                    <p class="section-header__pretitle">Selected Work</p>
+                    <h2 class="section-header__title">The Portfolio</h2>
+                    <p class="section-header__description">
+                        A curated selection of documentary photography across sports,
+                        wildlife, and lifestyle — each frame a story uncompromised.
+                    </p>
+                </div>
+
+                <!-- Filter Tabs -->
+                <div class="portfolio__filters reveal">
+                    <button class="portfolio__filter portfolio__filter--active" data-filter="all">All Work</button>
+                    <button class="portfolio__filter" data-filter="sports">Sports</button>
+                    <button class="portfolio__filter" data-filter="wildlife">Wildlife</button>
+                    <button class="portfolio__filter" data-filter="lifestyle">Lifestyle</button>
+                </div>
+
+                <!-- Portfolio Grid -->
+                <div class="portfolio__grid" id="portfolioGrid">
+                    <!-- Sports - Item 1 -->
+                    <article class="portfolio__item reveal" data-category="sports" data-index="0">
+                        <div class="portfolio__image-wrapper">
+                            <img
+                            src="img/20260425161251_IMG_4413.jpg"
+                            alt="Intense moment during a rugby match"
+                            class="portfolio__image"
+                            loading="lazy"
+                            >
+                            <div class="portfolio__overlay">
+                                <div class="portfolio__overlay-content">
+                                    <span class="portfolio__category">Sports</span>
+                                    <h3 class="portfolio__title">Kenya Cup Semifinal</h3>
+                                    <p class="portfolio__caption">KCB Rugby vs Nondiescript Rugby</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Wildlife - Item 2 -->
+                    <article class="portfolio__item portfolio__item--wide reveal" data-category="wildlife" data-index="1">
+                        <div class="portfolio__image-wrapper">
+                            <img
+                            src="https://picsum.photos/seed/wildlife-elephants/1000/700"
+                            alt="A herd of elephants crossing the golden savannah at dawn, dust rising in the warm light"
+                            class="portfolio__image"
+                            loading="lazy"
+                            >
+                            <div class="portfolio__overlay">
+                                <div class="portfolio__overlay-content">
+                                    <span class="portfolio__category">Wildlife</span>
+                                    <h3 class="portfolio__title">Dust &amp; Dawn</h3>
+                                    <p class="portfolio__caption">Amboseli, Kenya — 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Lifestyle - Item 3 -->
+                    <article class="portfolio__item reveal" data-category="lifestyle" data-index="2">
+                        <div class="portfolio__image-wrapper">
+                            <img
+                            src="https://picsum.photos/seed/lifestyle-market/800/900"
+                            alt="A vendor at a bustling street market arranging fresh produce under warm lantern light"
+                            class="portfolio__image"
+                            loading="lazy"
+                            >
+                            <div class="portfolio__overlay">
+                                <div class="portfolio__overlay-content">
+                                    <span class="portfolio__category">Lifestyle</span>
+                                    <h3 class="portfolio__title">Market Rhythms</h3>
+                                    <p class="portfolio__caption">Marrakech medina — 2024</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Sports - Item 4 -->
+                    <article class="portfolio__item portfolio__item--tall reveal" data-category="sports" data-index="3">
+                        <div class="portfolio__image-wrapper">
+                            <img
+                            src="https://picsum.photos/seed/sports-runner/700/1000"
+                            alt="Marathon runner pushing through exhaustion at the final stretch, captured in dramatic black and white"
+                            class="portfolio__image"
+                            loading="lazy"
+                            >
+                            <div class="portfolio__overlay">
+                                <div class="portfolio__overlay-content">
+                                    <span class="portfolio__category">Sports</span>
+                                    <h3 class="portfolio__title">Endurance</h3>
+                                    <p class="portfolio__caption">Boston Marathon — 2024</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Wildlife - Item 5 -->
+                    <article class="portfolio__item reveal" data-category="wildlife" data-index="4">
+                        <div class="portfolio__image-wrapper">
+                            <img
+                            src="https://picsum.photos/seed/wildlife-bird/800/800"
+                            alt="A raptor diving mid-flight, wings fully spread against a stormy sky"
+                            class="portfolio__image"
+                            loading="lazy"
+                            >
+                            <div class="portfolio__overlay">
+                                <div class="portfolio__overlay-content">
+                                    <span class="portfolio__category">Wildlife</span>
+                                    <h3 class="portfolio__title">The Hunt</h3>
+                                    <p class="portfolio__caption">Patagonia — 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Lifestyle - Item 6 -->
+                    <article class="portfolio__item portfolio__item--wide reveal" data-category="lifestyle" data-index="5">
+                        <div class="portfolio__image-wrapper">
+                            <img
+                            src="https://picsum.photos/seed/lifestyle-family/1000/650"
+                            alt="A multi-generational family sharing a meal outdoors, golden hour light bathing the scene"
+                            class="portfolio__image"
+                            loading="lazy"
+                            >
+                            <div class="portfolio__overlay">
+                                <div class="portfolio__overlay-content">
+                                    <span class="portfolio__category">Lifestyle</span>
+                                    <h3 class="portfolio__title">Breaking Bread</h3>
+                                    <p class="portfolio__caption">Tuscany, Italy — 2024</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Sports - Item 7 -->
+                    <article class="portfolio__item reveal" data-category="sports" data-index="6">
+                        <div class="portfolio__image-wrapper">
+                            <img
+                            src="https://picsum.photos/seed/sports-surf/800/750"
+                            alt="Surfer carving through a massive wave, silhouetted against the setting sun"
+                            class="portfolio__image"
+                            loading="lazy"
+                            >
+                            <div class="portfolio__overlay">
+                                <div class="portfolio__overlay-content">
+                                    <span class="portfolio__category">Sports</span>
+                                    <h3 class="portfolio__title">Barrel Rider</h3>
+                                    <p class="portfolio__caption">Pipeline, Hawaii — 2024</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Wildlife - Item 8 -->
+                    <article class="portfolio__item portfolio__item--tall reveal" data-category="wildlife" data-index="7">
+                        <div class="portfolio__image-wrapper">
+                            <img
+                            src="https://picsum.photos/seed/wildlife-lion/700/1000"
+                            alt="A lioness staring directly into the lens, intense gaze captured in striking detail"
+                            class="portfolio__image"
+                            loading="lazy"
+                            >
+                            <div class="portfolio__overlay">
+                                <div class="portfolio__overlay-content">
+                                    <span class="portfolio__category">Wildlife</span>
+                                    <h3 class="portfolio__title">The Stare</h3>
+                                    <p class="portfolio__caption">Serengeti, Tanzania — 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Lifestyle - Item 9 -->
+                    <article class="portfolio__item reveal" data-category="lifestyle" data-index="8">
+                        <div class="portfolio__image-wrapper">
+                            <img
+                            src="https://picsum.photos/seed/lifestyle-studio/800/850"
+                            alt="An artisan at work in a sun-drenched pottery studio, hands covered in clay"
+                            class="portfolio__image"
+                            loading="lazy"
+                            >
+                            <div class="portfolio__overlay">
+                                <div class="portfolio__overlay-content">
+                                    <span class="portfolio__category">Lifestyle</span>
+                                    <h3 class="portfolio__title">Hands of Craft</h3>
+                                    <p class="portfolio__caption">Kyoto, Japan — 2024</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Load More -->
+                <div class="portfolio__more reveal" id="portfolioMore" style="display:none;">
+                    <button class="btn btn--outline" id="loadMoreBtn">
+                        <span>Load More Work</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="container">
+                <div class="about__grid">
+                    <div class="about__image-col reveal">
+                        <div class="about__image-frame">
+                            <img
+                            src="https://picsum.photos/seed/photographer-portrait/600/800"
+                            alt="Portrait of the photographer — a documentary storyteller with a camera in hand"
+                            class="about__image"
+                            loading="lazy"
+                            >
+                            <div class="about__image-accent"></div>
+                        </div>
+                    </div>
+                    <div class="about__content-col reveal">
+                        <p class="section-header__pretitle">Behind the Lens</p>
+                        <h2 class="section-header__title about__title">
+                            I am a storyteller who refuses to compromise.
+                        </h2>
+                        <div class="about__text">
+                            <p>
+                                With over twelve years behind the camera, I've built
+                                <strong>No Compromise Films</strong> on a single belief: every
+                                frame must tell the truth. As a documentary photographer,
+                                cinematographer, producer, and creative director, I bring a
+                                holistic vision to every project — from conception to final cut.
+                            </p>
+                            <p>
+                                My work spans the raw energy of <em>sports arenas</em>, the
+                                untamed beauty of <em>wildlife</em> in its natural habitat, and
+                                the intimate moments of <em>everyday life</em> across cultures.
+                                I don't stage moments. I wait for them. I earn them.
+                            </p>
+                            <p>
+                                Based between Nairobi and London, I collaborate with brands,
+                                publications, and NGOs that value authenticity over artifice.
+                                When you work with No Compromise Films, you get the real story —
+                                beautifully told, ethically captured.
+                            </p>
+                        </div>
+                        <div class="about__stats">
+                            <div class="about__stat">
+                                <span class="about__stat-number" data-count="12">0</span>
+                                <span class="about__stat-label">Years Experience</span>
+                            </div>
+                            <div class="about__stat">
+                                <span class="about__stat-number" data-count="47">0</span>
+                                <span class="about__stat-label">Countries</span>
+                            </div>
+                            <div class="about__stat">
+                                <span class="about__stat-number" data-count="200">0</span>
+                                <span class="about__stat-plus">+</span>
+                                <span class="about__stat-label">Projects Delivered</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expertise / Services -->
+        <section class="expertise" id="expertise">
+            <div class="container">
+                <div class="section-header reveal">
+                    <p class="section-header__pretitle">What I Do</p>
+                    <h2 class="section-header__title">Areas of Expertise</h2>
+                </div>
+                <div class="expertise__grid">
+                    <div class="expertise__card reveal">
+                        <div class="expertise__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="2" y="3" width="20" height="14" rx="2"/>
+                                <path d="M8 21h8M12 17v4"/>
+                            </svg>
+                        </div>
+                        <h3 class="expertise__card-title">Cinematography</h3>
+                        <p class="expertise__card-text">
+                            Documentary film production with a cinematic edge. From
+                            handheld vérité to composed long-form narratives.
+                        </p>
+                    </div>
+                    <div class="expertise__card reveal">
+                        <div class="expertise__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10"/>
+                                <circle cx="12" cy="12" r="6"/>
+                                <circle cx="12" cy="12" r="2"/>
+                            </svg>
+                        </div>
+                        <h3 class="expertise__card-title">Photography</h3>
+                        <p class="expertise__card-text">
+                            Sports, wildlife &amp; lifestyle documentary photography
+                            captured with precision, patience, and purpose.
+                        </p>
+                    </div>
+                    <div class="expertise__card reveal">
+                        <div class="expertise__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <polygon points="13,2 3,14 12,14 11,22 21,10 12,10"/>
+                            </svg>
+                        </div>
+                        <h3 class="expertise__card-title">Producing</h3>
+                        <p class="expertise__card-text">
+                            End-to-end production management — concept development,
+                            logistics, crew coordination, and post-production.
+                        </p>
+                    </div>
+                    <div class="expertise__card reveal">
+                        <div class="expertise__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <h3 class="expertise__card-title">Creative Direction</h3>
+                        <p class="expertise__card-text">
+                            Shaping the visual narrative across campaigns, branding,
+                            and editorial — ensuring every detail serves the story.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Showreel Section -->
+        <section class="showreel" id="showreel">
+            <div class="container">
+                <div class="section-header reveal">
+                    <p class="section-header__pretitle">Moving Pictures</p>
+                    <h2 class="section-header__title">The Showreel</h2>
+                </div>
+                <div class="showreel__wrapper reveal">
+                    <div class="showreel__frame">
+                        <!-- Placeholder for video embed -->
+                        <div class="showreel__placeholder">
+                            <div class="showreel__placeholder-inner">
+                                <svg class="showreel__play-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5,3 19,12 5,21"/>
+                                </svg>
+                                <span class="showreel__placeholder-text">Documentary Reel 2024</span>
+                                <span class="showreel__placeholder-duration">4:32</span>
+                            </div>
+                            <img
+                            src="https://picsum.photos/seed/showreel-thumb/1200/675"
+                            alt="Showreel thumbnail — documentary cinematography compilation"
+                            class="showreel__thumb"
+                            loading="lazy"
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials" id="testimonials">
+            <div class="container">
+                <div class="section-header reveal">
+                    <p class="section-header__pretitle">Kind Words</p>
+                    <h2 class="section-header__title">What Clients Say</h2>
+                </div>
+                <div class="testimonials__grid reveal">
+                    <blockquote class="testimonials__quote">
+                        <p>&ldquo;Working with No Compromise Films was transformative. They captured the soul of our conservation project in ways we never imagined possible.&rdquo;</p>
+                        <cite>
+                            <strong>Dr. Amina Ochieng</strong>
+                            <span>Wildlife Conservation Trust</span>
+                        </cite>
+                    </blockquote>
+                    <blockquote class="testimonials__quote">
+                        <p>&ldquo;The sports documentary they produced for our campaign was raw, powerful, and deeply human. An absolute master of the craft.&rdquo;</p>
+                        <cite>
+                            <strong>Marcus Webb</strong>
+                            <span>Global Sports Initiative</span>
+                        </cite>
+                    </blockquote>
+                    <blockquote class="testimonials__quote">
+                        <p>&ldquo;Their creative direction elevated our entire brand. Every frame, every cut — intentional and uncompromising.&rdquo;</p>
+                        <cite>
+                            <strong>Elena Rossi</strong>
+                            <span>Editorial Director, Nomad Magazine</span>
+                        </cite>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="contact__grid">
+                    <div class="contact__info reveal">
+                        <p class="section-header__pretitle">Get in Touch</p>
+                        <h2 class="section-header__title contact__title">
+                            Let's create something<br>uncompromising.
+                        </h2>
+                        <p class="contact__text">
+                            I'm always open to new collaborations — whether it's a
+                            documentary feature, a brand campaign, or an editorial
+                            assignment. Reach out and let's discuss your vision.
+                        </p>
+                        <div class="contact__details">
+                            <div class="contact__detail">
+                                <span class="contact__detail-label">Email</span>
+                                <a href="mailto:hello@nocompromisefilms.com" class="contact__detail-link">hello@nocompromisefilms.com</a>
+                            </div>
+                            <div class="contact__detail">
+                                <span class="contact__detail-label">Location</span>
+                                <span>Nairobi, Kenya &amp; London, UK</span>
+                            </div>
+                            <div class="contact__detail">
+                                <span class="contact__detail-label">Follow</span>
+                                <div class="contact__socials">
+                                    <a href="#" class="contact__social-link" aria-label="Instagram">Instagram</a>
+                                    <a href="#" class="contact__social-link" aria-label="Vimeo">Vimeo</a>
+                                    <a href="#" class="contact__social-link" aria-label="LinkedIn">LinkedIn</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact__form reveal" id="contactForm">
+                        <div class="contact__form-group">
+                            <label for="name" class="contact__label">Name</label>
+                            <input type="text" id="name" name="name" class="contact__input" placeholder="Your name" required>
+                        </div>
+                        <div class="contact__form-group">
+                            <label for="email" class="contact__label">Email</label>
+                            <input type="email" id="email" name="email" class="contact__input" placeholder="Your email address" required>
+                        </div>
+                        <div class="contact__form-group">
+                            <label for="subject" class="contact__label">Subject</label>
+                            <input type="text" id="subject" name="subject" class="contact__input" placeholder="Project inquiry">
+                        </div>
+                        <div class="contact__form-group">
+                            <label for="message" class="contact__label">Message</label>
+                            <textarea id="message" name="message" class="contact__textarea" rows="5" placeholder="Tell me about your project..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--primary contact__submit">
+                            <span>Send Message</span>
+                        </button>
+                        <p class="contact__form-message" id="formMessage"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <a href="#home" class="footer__logo">No Compromise Films</a>
+                <p class="footer__copy">&copy; 2024 No Compromise Films. All rights reserved. Uncompromising since day one.</p>
+                <div class="footer__links">
+                    <a href="#home">Home</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+        <div class="lightbox__backdrop"></div>
+        <button class="lightbox__close" id="lightboxClose" aria-label="Close lightbox">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 6L6 18M6 6l12 12"/>
+            </svg>
+        </button>
+        <button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" aria-label="Previous image">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 18l-6-6 6-6"/>
+            </svg>
+        </button>
+        <button class="lightbox__nav lightbox__nav--next" id="lightboxNext" aria-label="Next image">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18l6-6-6-6"/>
+            </svg>
+        </button>
+        <div class="lightbox__content" id="lightboxContent">
+            <img src="" alt="" class="lightbox__image" id="lightboxImage">
+            <div class="lightbox__caption" id="lightboxCaption"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
